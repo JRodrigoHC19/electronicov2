@@ -9,6 +9,7 @@ use Illuminate\Routing\Controller as BaseController;
 
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 use App\Models\User;
@@ -19,7 +20,8 @@ class Controller extends BaseController
 
     public function usuarioConfig(Request $request)
     {
-        $usuario = User::find($request->input('codigo'));
+        $user = Auth::user();
+        $usuario = User::find($user->id);
         $usuario->name = $request->input('usuario');
         $usuario->save();
 
@@ -28,7 +30,8 @@ class Controller extends BaseController
 
     public function contraConfig(Request $request)
     {
-        $contrasenia = User::find($request->input('codigo'));
+        $user = Auth::user();
+        $contrasenia = User::find($user->id);
         $contrasenia->password = Hash::make( $request->input('password'));
         $contrasenia->save();
             
