@@ -17,12 +17,188 @@
     <link rel="stylesheet" href="{{ asset('storage/scss/detalles.scss') }}">
     <link rel="stylesheet" href="{{ asset('storage/css/colores.css') }}">
     <style>
-      .floating-button {
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          z-index: 9999;
-      }
+          
+            /* Para el Sistema de Busqueda - BARRA DE BUSQUEDA */
+          
+            .search-container {
+              position: relative;
+            }
+            
+            .search-results {
+            list-style: none; /* Esto elimina las viñetas */
+            padding: 0;
+            margin: 0;
+              position: absolute;
+              top: 100%;
+              left: 0;
+              width: 100%;
+              max-height: 200px;
+              background-color: #f9f9f9;
+              border: 1px solid #ddd;
+              border-top: none;
+              z-index: 1;
+            }
+            
+            .search-results li {
+            
+            padding: 4px;
+            cursor: pointer;
+            }
+            
+            .search-results li:hover {
+            background-color: #e9e9e9;
+            }
+            
+            .floating-button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 9999;
+            }
+
+            /* stylelint-disable stylistic/selector-list-comma-newline-after */
+            
+            .blog-header-logo {
+                font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+                font-size: 2.25rem;
+                }
+            
+                .blog-header-logo:hover {
+                text-decoration: none;
+                }
+            
+                h1, h2, h3, h4, h5, h6 {
+                font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+                }
+            
+                .flex-auto {
+                flex: 0 0 auto;
+                }
+            
+                .h-250 { height: 250px; }
+                @media (min-width: 768px) {
+                .h-md-250 { height: 250px; }
+                }
+            
+                /* Pagination */
+                .blog-pagination {
+                margin-bottom: 4rem;
+                }
+            
+                /*
+                * Blog posts
+                */
+                .blog-post {
+                margin-bottom: 4rem;
+                }
+                .blog-post-meta {
+                margin-bottom: 1.25rem;
+                color: #727272;
+                }
+            
+            
+            
+              .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+              }
+            
+              @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                  font-size: 3.5rem;
+                }
+              }
+            
+              .b-example-divider {
+                width: 100%;
+                height: 3rem;
+                background-color: rgba(0, 0, 0, .1);
+                border: solid rgba(0, 0, 0, .15);
+                border-width: 1px 0;
+                box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+              }
+            
+              .b-example-vr {
+                flex-shrink: 0;
+                width: 1.5rem;
+                height: 100vh;
+              }
+            
+              .bi {
+                vertical-align: -.125em;
+                fill: currentColor;
+              }
+            
+              .nav-scroller {
+                position: relative;
+                z-index: 2;
+                height: 2.75rem;
+                overflow-y: hidden;
+              }
+            
+              .nav-scroller .nav {
+                display: flex;
+                flex-wrap: nowrap;
+                padding-bottom: 1rem;
+                margin-top: -1px;
+                overflow-x: auto;
+                text-align: center;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+              }
+            
+              .btn-bd-primary {
+                --bd-violet-bg: #712cf9;
+                --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+            
+                --bs-btn-font-weight: 600;
+                --bs-btn-color: var(--bs-white);
+                --bs-btn-bg: var(--bd-violet-bg);
+                --bs-btn-border-color: var(--bd-violet-bg);
+                --bs-btn-hover-color: var(--bs-white);
+                --bs-btn-hover-bg: #6528e0;
+                --bs-btn-hover-border-color: #6528e0;
+                --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+                --bs-btn-active-color: var(--bs-btn-hover-color);
+                --bs-btn-active-bg: #5a23c8;
+                --bs-btn-active-border-color: #5a23c8;
+              }
+              .bd-mode-toggle {
+                z-index: 1500;
+              }
+
+                .redimencionar01 {
+                    max-width: 15%;
+                    max-height: 15%;
+                }
+                
+                .redimencionar02 {
+                    max-width: 32px;
+                    max-height: 32px;
+                }
+                
+                .redimencionar03 {
+                    max-width: 45px;
+                    max-height: 45px;
+                }
+                
+                .redimencionar04 {
+                    max-width: 19px;
+                    max-height: 19px;
+                }
+                
+                .redimencionar05 {
+                    max-width: 70%;
+                }
+                
+                
+                // ALTERA LA POSICION DE LAS ETIQUETAS login y register
+                .login-register {
+                    margin: 0px -10px;
+                }      
     </style>
 
 
