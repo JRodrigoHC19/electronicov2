@@ -13,35 +13,45 @@
         <link rel="stylesheet" href="{{ asset('storage/css/colores.css') }}">
         <style>
           
-            /* Para el Sistema de Busqueda - BARRA DE BUSQUEDA */
-          
-            .search-container {
-              position: relative;
+             .label-container {
+                position: relative;
+                display: inline-block;
             }
-            
-            .search-results {
-            list-style: none; /* Esto elimina las viñetas */
-            padding: 0;
-            margin: 0;
-              position: absolute;
-              top: 100%;
-              left: 0;
-              width: 100%;
-              max-height: 200px;
-              background-color: #f9f9f9;
-              border: 1px solid #ddd;
-              border-top: none;
-              z-index: 1;
+    
+            .edit-button {
+                position: absolute;
+                right: -30px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                display: none;
             }
-            
-            .search-results li {
-            
-            padding: 4px;
-            cursor: pointer;
+
+            .edit-button-image {
+                position: absolute;
+                right: 42.7%;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: #007bff;
+                color: #fff;
+                width: 15%;
+                height: 30%;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                display: none;
             }
-            
-            .search-results li:hover {
-            background-color: #e9e9e9;
+    
+            .label-container:hover .edit-button {
+                display: block;
+            }
+
+            .label-container:hover .edit-button-image {
+                display: block;
             }
             
             .floating-button {
