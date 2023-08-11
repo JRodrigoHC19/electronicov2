@@ -25,7 +25,7 @@ class Controller extends BaseController
         $usuario->name = $request->input('usuario');
         $usuario->save();
 
-        return redirect()->back()->withErrors($usuario)->withInput();
+        return redirect('/');
     }
 
     public function contraConfig(Request $request)
@@ -35,6 +35,6 @@ class Controller extends BaseController
         $contrasenia->password = Hash::make( $request->input('password'));
         $contrasenia->save();
             
-        return redirect()->back()->withErrors($contrasenia)->withInput();
+        return redirect('/');
     }
 }
